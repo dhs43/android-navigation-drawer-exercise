@@ -14,6 +14,10 @@ import android.view.MenuItem;
 
 
 import com.codepath.android.navigationdrawerexercise.R;
+import com.codepath.android.navigationdrawerexercise.fragments.FamilyGuyFragment;
+import com.codepath.android.navigationdrawerexercise.fragments.FuturamaFragment;
+import com.codepath.android.navigationdrawerexercise.fragments.SimpsonsFragment;
+import com.codepath.android.navigationdrawerexercise.fragments.SouthParkFragment;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -58,20 +62,20 @@ public class MainActivity extends AppCompatActivity {
         Fragment fragment = null;
         Class fragmentClass;
         switch(menuItem.getItemId()) {
-            case R.id.familyguyFragment:
-                fragmentClass = FirstFragment.class;
+            case R.id.southparkFragment:
+                fragmentClass = SouthParkFragment.class;
                 break;
             case R.id.familyguyFragment:
-                fragmentClass = SecondFragment.class;
+                fragmentClass = FamilyGuyFragment.class;
                 break;
             case R.id.simpsonsFragment:
-                fragmentClass = ThirdFragment.class;
+                fragmentClass = SimpsonsFragment.class;
                 break;
             case R.id.futuramaFragment:
-                fragmentClass = ThirdFragment.class;
+                fragmentClass = FuturamaFragment.class;
                 break;
             default:
-                fragmentClass = FirstFragment.class;
+                fragmentClass = SouthParkFragment.class;
         }
 
         try {
@@ -90,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
         setTitle(menuItem.getTitle());
         // Close the navigation drawer
         mDrawer.closeDrawers();
+        menuItem.setChecked(false);
     }
 
 
