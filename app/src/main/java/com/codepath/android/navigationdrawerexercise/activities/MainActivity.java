@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -44,6 +46,12 @@ public class MainActivity extends AppCompatActivity {
 
         mDrawer.addDrawerListener(drawerToggle);
         setupDrawerContent(nvDrawer);
+
+
+        nvDrawer.getMenu().getItem(0).setChecked(true);
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.flContent, new SouthParkFragment()).commit();
+        setTitle(R.string.south_park);
     }
 
     private void setupDrawerContent(NavigationView navigationView) {

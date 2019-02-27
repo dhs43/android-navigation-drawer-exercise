@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item
-        android:id="@+id/southparkFragment"
-        android:icon="@drawable/ic_south_park"
-        android:title="South Park" />
-    <item
-        android:id="@+id/familyguyFragment"
-        android:icon="@drawable/ic_family_guy"
-        android:title="Family Guy" />
+
+    <item android:title="Cartoon wars">
+        <menu>
+            <group android:checkableBehavior="single">
+
+            <item
+                android:id="@+id/southparkFragment"
+                android:icon="@drawable/ic_south_park"
+                android:title="South Park" />
+            <item
+                android:id="@+id/familyguyFragment"
+                android:icon="@drawable/ic_family_guy"
+                android:title="Family Guy" />
+            </group>
+        </menu>
+    </item>
+
+
+    <item android:title="Simpsorama">
+        <menu>
+            <group android:checkableBehavior="single">
     <item
         android:id="@+id/simpsonsFragment"
         android:icon="@drawable/ic_simpsons"
@@ -17,5 +30,8 @@
         android:id="@+id/futuramaFragment"
         android:icon="@drawable/ic_futurama"
         android:title="Futurama" />
+            </group>
+        </menu>
+    </item>
 
 </menu>

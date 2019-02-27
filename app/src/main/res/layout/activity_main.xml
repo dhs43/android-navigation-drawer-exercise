@@ -31,6 +31,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="start"
             app:menu="@menu/drawer_view"
-            android:id="@+id/nvView" />
+            android:id="@+id/nvView"
+            app:headerLayout="@layout/nav_header" />
 
 </android.support.v4.widget.DrawerLayout>
